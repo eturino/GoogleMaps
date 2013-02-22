@@ -220,11 +220,11 @@ class EtuDev_GoogleMaps_Static {
 
 		$h .= '&size=' . $this->getWidth() . 'x' . $this->getHeight();
 
-		$h .= '&maptype=' . ($this->getMapType() ?: 'roadmap');
+		$h .= '&maptype=' . ($this->getMapType() ? : 'roadmap');
 
 		if ($this->isShowMarker()) {
-			$h .= '&markers=color:' . ($this->getColorMarker() ?: 'blue');
-			$h .= '|label:' . ($this->getLabelMarker() ?: 'R');
+			$h .= '&markers=color:' . ($this->getColorMarker() ? : 'blue');
+			$h .= '|label:' . ($this->getLabelMarker() ? : 'R');
 			$h .= '|' . $this->getLatitude();
 			$h .= ',' . $this->getLongitude();
 		}
